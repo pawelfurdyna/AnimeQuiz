@@ -352,7 +352,7 @@
             var randomInt = Math.floor(Math.random() * songs.length);
             var randomElement = songs[randomInt];
             document.getElementById("song").innerHTML = randomElement;
-            let removed = songs.splice(randomInt, 1);
+            songs = songs.filter(item => item !== randomElement);
         }
         function PointUp() {
             i++;
