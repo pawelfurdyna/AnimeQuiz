@@ -351,6 +351,7 @@
                         ];
             var randomElement = songs[Math.floor(Math.random() * songs.length)];
             document.getElementById("song").innerHTML = randomElement;
+            songs.splice(randomElement, 1);
         }
         function PointUp() {
             i++;
