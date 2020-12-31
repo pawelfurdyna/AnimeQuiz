@@ -349,9 +349,10 @@
                         "Haiyore! Nyaruko-san",
                         "Yuru Yuri"
                         ];
-            var randomElement = songs[Math.floor(Math.random() * songs.length)];
+            var randomInt = Math.floor(Math.random() * songs.length);
+            var randomElement = songs[randomInt];
             document.getElementById("song").innerHTML = randomElement;
-            let removed = songs.splice(randomElement, 1);
+            let removed = songs.splice(randomInt, 1);
         }
         function PointUp() {
             i++;
