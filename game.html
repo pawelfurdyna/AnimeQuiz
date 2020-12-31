@@ -5,8 +5,7 @@
     </head>
     <script>
         var i = 0;
-        function RandomSong(){
-            var songs = ["Death Note",
+        var songs = ["Death Note",
                         "Shingeki no Kyojin",
                         "Fullmetal Alchemist: Brotherhood",
                         "Sword Art Online",
@@ -349,6 +348,7 @@
                         "Haiyore! Nyaruko-san",
                         "Yuru Yuri"
                         ];
+        function RandomSong(){
             var randomInt = Math.floor(Math.random() * songs.length);
             var randomElement = songs[randomInt];
             document.getElementById("song").innerHTML = randomElement;
