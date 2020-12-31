@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Anime Quiz</title>
+    </head>
+    <script>
+        function StartGame() {
+            location.href = "/game.html"
+        }
+    </script>
+    <style>
+        .container { 
+            height: 200px;
+            position: relative;
+            
+        }
+
+        .center {
+             margin: 0;
+             position: absolute;
+             top: 50%;
+             left: 50%;
+             -ms-transform: translate(-50%, -50%);
+             transform: translate(-50%, -50%);
+        }
+        .button {
+            border: none;
+            height: 10em;
+            width: 20em;
+        }
+
+        .StartButton {
+            background-color: #ddd;
+        }
+
+        .StartButton:hover {
+            background-color: #ccc;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div class="center">
+              <button class="StartButton button" onclick="StartGame()">START</button>
+            </div>
+          </div>
+    </body>
+</html>

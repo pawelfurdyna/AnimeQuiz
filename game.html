@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Anime Quiz</title>
+    </head>
+    <script>
+        var i = 0;
+        function RandomSong(){
+            var songs = ["Death Note",
+                        "Shingeki no Kyojin",
+                        "Fullmetal Alchemist: Brotherhood",
+                        "Sword Art Online",
+                        "One Punch Man",
+                        "Tokyo Ghoul",
+                        "Boku no Hero Academia",
+                        "Naruto",
+                        "Steins;Gate",
+                        "No Game No Life",
+                        "Kimi no Na wa.",
+                        "Hunter x Hunter",
+                        "Angel Beats!",
+                        "Code Geass",
+                        "Toradora!",
+                        "Mirai Nikki",
+                        "Noragami",
+                        "Naruto: Shippuuden",
+                        "Re:Zero kara Hajimeru Isekai Seikatsu",
+                        "Ao no Exorcist",
+                        "Shigatsu wa Kimi no Uso",
+                        "Akame ga Kill!",
+                        "Nanatsu no Taizai",
+                        "Boku dake ga Inai Machi",
+                        "Koe no Katachi",
+                        "Fairy Tail",
+                        "One Piece",
+                        "Kimetsu no Yaiba",
+                        "Bleach",
+                        "Kill la Kill",
+                        "Kono Subarashii Sekai ni Shukufuku wo!",
+                        "Cowboy Bebop",
+                        "Sen to Chihiro no Kamikakushi",
+                        "Kiseijuu: Sei no Kakuritsu",
+                        "Soul Eater",
+                        "Tengen Toppa Gurren Lagann",
+                        "Psycho-Pass",
+                        "Another",
+                        "Ansatsu Kyoushitsu",
+                        "Mob Psycho 100",
+                        "Elfen Lied",
+                        "Death Parade",
+                        "Fullmetal Alchemist",
+                        "Shokugeki no Souma",
+                        "Ano Hi Mita Hana no Namae wo Bokutachi wa Mada Shiranai.",
+                        "Neon Genesis Evangelion",
+                        "Highschool of the Dead",
+                        "Haikyuu",
+                        "Durarara",
+                        "Fate/Zero",
+                        "Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka",
+                        "Bakemonogatari",
+                        "Hataraku Maou-sama!",
+                        "Noragami Aragoto",
+                        "Overlord",
+                        "Charlotte",
+                        "Yakusoku no Neverland",
+                        "Violet Evergarden",
+                        "High School DxD",
+                        "Mahou Shoujo Madoka Magica",
+                        "Cuilty Crown",
+                        "Yahari Ore no Seishun Love Comedy wa Machigatteiru.",
+                        "Deadman Wonderland",
+                        "Chuunibyou demo Koi ga Shitai!",
+                        "Darling in the FranXX",
+                        "JoJo no Kimyou na Bouken",
+                        "Hyouka",
+                        "Clannad: After Story",
+                        "Sakura-sou no Pet na Kanojo",
+                        "Samurai Champloo",
+                        "Dragon Ball Z",
+                        "Owari no Seraph",
+                        "Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai",
+                        "Log Horizon",
+                        "Dr. Stone",
+                        "Kuroshitsuji",
+                        "Mononoke Hime",
+                        "Tate no Yuusha no Nariagari",
+                        "Kaichou wa Maid-sama!",
+                        "Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen",
+                        "Nisekoi",
+                        "Kyoukai no Kanata",
+                        "Made in Abyss",
+                        "Howl no Ugoku Shiro",
+                        "Zankyou no Terror",
+                        "Ouran Koukou Host Club",
+                        "Kuroko no Basket",
+                        "Kakegurui",
+                        "Black Clover",
+                        "K-On",
+                        "Darker than Black: Kuro no Keiyakusha",
+                        "Magi: The Labyrinth of Magic",
+                        "Suzumiya Haruhi no Yuuutsu",
+                        "Tonari no Kaibutsu-kun",
+                        "Kobayashi-san Chi no Maid Dragon",
+                        "Mahouka Koukou no Rettousei",
+                        "Bungou Stray Dogs",
+                        "Gintama",
+                        "Fate/stay night",
+                        "Fate/stay night: Unlimited Blade Works",
+                        "Dragon Ball",
+                        "Date A Live",
+                        "Baccano!",
+                        "Black Bullet",
+                        "Tonari no Totoro",
+                        "ReLIFE",
+                        "Black Lagoon",
+                        "Tensei shitara Slime Datta Ken",
+                        "Byousoku 5 Centimeter",
+                        "Btoom!",
+                        "Prison School",
+                        "Danganronpa: Kibou no Gakuen to Zetsubou no Koukouset The Amination",
+                        "Goblin Slayer",
+                        "Hellsing Ultimate",
+                        "Gekkan Shoujo Nozaki-kun",
+                        "Golden Time",
+                        "Zero no Tsukaima",
+                        "Enen no Shouboutai",
+                        "Dororo",
+                        "Ookami to Koushinryou",
+                        "Higurashi no Naku Koro ni",
+                        "Kimi ni Todoke",
+                        "Nichijou",
+                        "Boku wa Tomodachi ga Sukunai",
+                        "Toaru Majutsu no Index",
+                        "Magi: The Kingdom of Magic",
+                        "Plastic Memories",
+                        "Rakudai Kishi no Cavalry",
+                        "Kokoro Connect",
+                        "Shinsekai yori",
+                        "Toki wo Kakeru Shoujo",
+                        "Kekkai Sensen",
+                        "Mahoutsukai no Yome",
+                        "Mushishi",
+                        "Vinland Saga",
+                        "Ookami Kodomo no Ame to Yuki",
+                        "FLCL",
+                        "Devilman: Crybaby",
+                        "Accel World",
+                        "Monster",
+                        "Gate: Jietai Kanochi nite, Kaku Tatakaeri",
+                        "Trinity Seven",
+                        "K",
+                        "Danshi Koukousei no Nichijou",
+                        "Koutetsujou no Kabaneri",
+                        "Youjo Senki",
+                        "Great Teacher Onizuka",
+                        "InuTasha",
+                        "Akatsuki no Yona",
+                        "D.Gray-man",
+                        "Ao Haru Ride",
+                        "Ore no Imouto ga Konnani Kawaii Wake ga Nai",
+                        "Nisemonogatari",
+                        "Free!",
+                        "Kotonoha no Niwa",
+                        "Trigun",
+                        "Yamada-kun to 7-nin no Majo",
+                        "Hotarubi no Mori e",
+                        "Hellsing",
+                        "NHK ni Youkoso!",
+                        "Shimoneta to Iu Gainen go Sonzai Shinai Taikutsu na Sekai",
+                        "Akira",
+                        "Yuri!!! on Ice",
+                        "Youkoso Jitsuryoku Shijou Shugi no Kyoushitse e",
+                        "Claymore",
+                        "Rosario to Vampire",
+                        "Saiki Kusou no Ψ-nan",
+                        "Hai to Gensou no Grimgar",
+                        "Lucky Star",
+                        "Baka to Test to Shoukanjuu",
+                        "Kiznaiver",
+                        "Sakamoto Desu ga?",
+                        "Kore wa Zombie Desu ka?",
+                        "Blood Lad",
+                        "Monster Musume no Iru Nichijou",
+                        "Masamune-kun no Revenge",
+                        "Orange",
+                        "Owari no Seraph",
+                        "Dragon Ball Super",
+                        "School Days",
+                        "Watashi ga Motenai no wa Dou Kangaetemo Omaera ga Warui!",
+                        "Kami nomi zo Shiru Sekai",
+                        "Barakamon",
+                        "IS: Infinite Stratos",
+                        "Eromanga-sensei",
+                        "Strike the Blood",
+                        "Kami no Tou",
+                        "Boruto: Naruto Next Generations",
+                        "Wotaku no Koi wa Muzukasii",
+                        "Amagi Brilliant Park",
+                        "Bakuman",
+                        "Rokka no Yuusha",
+                        "Zetsuen no Tempest",
+                        "To LOVE-Ru",
+                        "Himouto! Umaru-chan",
+                        "Ergo Proxy",
+                        "Vampire Knight",
+                        "Gakusen Toshi Asterisk",
+                        "Jujutsu Kaisen",
+                        "Koukaku Kidoutai",
+                        "Ore Monogatari!!",
+                        "Sukitte Ii na yo.",
+                        "Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka",
+                        "Serial Experiments Lain",
+                        "Shakugan no Shana",
+                        "Dragon Ball GT",
+                        "Tsurezure Children",
+                        "Yuu Yuu Hakusho",
+                        "Shinmai Maou no Testament",
+                        "Rokudenashi Majutsu Koushi to Akashic Records",
+                        "Shiki",
+                        "Nagi no Asu kara",
+                        "Mondaiji-tachi ga Isekai kara Kuru Sou Desu yo?",
+                        "Katekyo Hitman Reborn!",
+                        "Sankarea",
+                        "Beelzebub",
+                        "Higashi no Eden",
+                        "Toaru Kagaku no Railgun",
+                        "91 Days",
+                        "Pokemon",
+                        "Little Witch Academia",
+                        "Kuzu no Honkai",
+                        "Grisaia no Kajitsu",
+                        "Gamers!",
+                        "Akagami no Shirayuki-hime",
+                        "Ajin",
+                        "3-gatsu no Lion",
+                        "Katanagatari",
+                        "Saenai Heroine no Sodatekata",
+                        "Aldnoah.Zero",
+                        "Blend S",
+                        "Kiss x Sis",
+                        "Lovely Complex",
+                        "Kenpuu Kenki Berserk",
+                        "Gosick",
+                        "Kuroshitsuji",
+                        "The God of High School",
+                        "Tenki no Ko",
+                        "Summer Wars",
+                        "Gangsta",
+                        "Hotaru no Haka",
+                        "Kamisama Hajimemashita",
+                        "God Eater",
+                        "Absolute Duo",
+                        "Fruits Basket",
+                        "Full Metal Panic!",
+                        "Natsume Yuujinchou",
+                        "Beastars",
+                        "Isekai Maou to Shoukan Shoujo no Dorei Majutsu",
+                        "Drifters",
+                        "Hataraku Saibou",
+                        "Chobits",
+                        "Inuyashiki",
+                        "Inu x Boku",
+                        "Ichiban Ushiro no Daimaou",
+                        "Grand Blue",
+                        "Sora no Otoshimono",
+                        "Nana",
+                        "Kimi no Suizou wo Tabetai",
+                        "Seitokai Yakuindomo",
+                        "Usagi Drop",
+                        "Mayo Chiki!",
+                        "Ore no Kanojo to Osananajimi ga Shuraba Sugiru",
+                        "Musaigen no Phantom World",
+                        "Rurouni Kenshin: Meiji Kenkaku Romantan",
+                        "Koukyoushihen Eureka Seven",
+                        "5-toubun no Hanayome",
+                        "Hajime no Ippo",
+                        "Netoge no Yome wa Onnanoko ja Nai to Omotta?",
+                        "Kaze no Stigma",
+                        "Mekakucity Actors",
+                        "Hentai Ouji to Warawanai Neko.",
+                        "Tokyo Ravens",
+                        "Domestic na Kanojo",
+                        "Kanojo, Okarishimasu",
+                        "Perfect Blue",
+                        "Sousei no Onmyouji",
+                        "Majo no Takkyuubin",
+                        "Pandora Hearts",
+                        "Banana Fish",
+                        "Paprika",
+                        "Re:Creators",
+                        "Working",
+                        "Yosuga no Sora: In Solitude, Where We Are Least Alone.",
+                        "Satsuriku no Tenshi",
+                        "Love Live! School Idol Project",
+                        "Maoyuu Maou Yuusha",
+                        "Owarimonogatari",
+                        "Shirobako",
+                        "Karakai Jouzu no Takagi-san",
+                        "Tsuki ga Kirei",
+                        "Gake no Ue no Ponyo",
+                        "Chihayafuru",
+                        "Gabriel DropOut",
+                        "Hinamatsuri",
+                        "Gakkougurashi!",
+                        "Net-juu no Susume",
+                        "Cardcaptor Sakura",
+                        "Dagashi Kashi",
+                        "Ore no Nounai Sentakushi ga, Gakuen Love Comedy wo Zenryoku de Jama Shiteiru",
+                        "Sora yori mo Tooi Basho",
+                        "Isekai wa Smartphone to Tomo ni.",
+                        "Shinchou Yuusha: Kono Yuusha ga Ore Tueee Kuse ni Shinchou Sugiru",
+                        "Dakara Boku wa, H ga Dekinai.",
+                        "New Game!",
+                        "Sekirei",
+                        "Tenkuu no Shiro Laputa",
+                        "Aho Girl",
+                        "Citrus",
+                        "Hibike! Euphonium",
+                        "B-gata H-kei",
+                        "Digimon Adventure",
+                        "Hajimete no Gal",
+                        "Blood+",
+                        "No.6",
+                        "Seishun Buta Yarou wa Yumemiru Shoujo no Yume wo Minai",
+                        "Hagure Yuusha no Aesthetica",
+                        "Inou-Battle wa Nichijou-kei no Naka de",
+                        "Hanamonogatari",
+                        "Maou Gakuin no Futekigousha: Shijou Saikyou no Maou no Shiso, Tensei shite Shison-tachi no Gakkou e",
+                        "Tasogare Otome x Amnesia",
+                        "D-Frag!",
+                        "Demi-chan wa Kataritai",
+                        "Kenja no Mago",
+                        "Hitsugi no Chaika",
+                        "Tsukimonogatari",
+                        "Hidan no Aria",
+                        "Ano Natsu de Matteru",
+                        "Bokura wa Minna Kawai-sou",
+                        "Black★Rock Shooter",
+                        "Grisaia no Rakuen",
+                        "Tanaka-kun wa Itsumo Kedaruge",
+                        "Air Gear",
+                        "Special A",
+                        "Mikakunin de Shinkoukei",
+                        "Shaman King",
+                        "Tamako Market",
+                        "Non Non Biyori",
+                        "Sayonara Zetsubou Sensei",
+                        "Amagami SS",
+                        "Haiyore! Nyaruko-san",
+                        "Yuru Yuri"
+                        ];
+            var randomElement = songs[Math.floor(Math.random() * songs.length)];
+            document.getElementById("song").innerHTML = randomElement;
+        }
+        function PointUp() {
+            i++;
+            document.getElementById("points").innerHTML = i;
+            RandomSong();
+        }
+        function NextSong() {
+            RandomSong();
+        }
+        function startTimer(duration, display) {
+            var timer = duration, minutes, seconds;
+            setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    document.getElementById("score").innerHTML = "You get " + i + " points.";
+                    if (--timer < -5) {
+                        location.href = "/index.html"
+                    }
+
+                }
+            }, 1000);
+        }
+
+    window.onload = function () {
+        var twoMinutes = 60 * 2,
+            display = document.querySelector('#time');
+        startTimer(twoMinutes, display);
+        RandomSong();
+    };
+    </script>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        .container { 
+            width: 50%;
+            height: 200px;
+            margin: auto;
+        }
+        .left {
+            float: left;
+            width: 50%;
+        }
+        .right {
+            float: right;
+            width: 50%;
+        }
+
+        .button {
+            border: none;
+            height: 4em;
+            width: 8em;
+        }
+
+        .CorrectButton {
+            background-color: rgb(21, 212, 63);
+        }
+        .CorrectButton:hover {
+            background-color: rgb(1, 192, 43);
+        }
+
+        .SkipButton {
+            background-color: rgb(47, 100, 247);
+        }
+        .SkipButton:hover {
+            background-color: rgb(27, 80, 227);
+        }
+    </style>
+    <body>
+        <p id="time"></p>
+        <div style="width: 100px;">
+            <p style="float: left; width: 65%; overflow: hidden;">Points: </p>
+            <p style="float: right; width: 35%; overflow: hidden;" id="points"></p>
+        </div>
+        <div class="songs">
+            <h1 id="song"></h1>
+        </div>
+        <div class="container">
+            <div class="left">
+                <button class="CorrectButton button" onclick="PointUp()">CORRECT</button>
+            </div>
+            <div class="right">
+                <button class="SkipButton button" onclick="RandomSong()">SKIP</button>
+            </div>
+        </div>
+        <h1 id="score"></h1>
+    </body>
+</html>
